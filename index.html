@@ -4,10 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Saira+Stencil:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>ミク ポモドーロ</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <h1 class="title">ここは画像の予定</h1>
+      <hr />
+      <p class="timer" id="timer">25:00</p>
+      <div class="button-wrapper">
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>

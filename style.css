@@ -1,7 +1,83 @@
 @charset "utf-8";
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   width: 100%;
-  height: 100vh;
-  background: linear-gradient(to bottom right, #39c5bb, #00ff55);
+  min-height: 100vh;
+  background: linear-gradient(to right bottom, #39c5bb, #00ff55);
+  display: grid;
+  place-content: center;
+  font-family: "Saira Stencil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  color: #e5e5e5;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1.6em;
+  padding: 4em;
+  box-shadow: 0 4px 8px 0px rgba(0, 0, 0, 0.16);
+}
+
+.title {
+  font-size: 3em;
+}
+
+hr {
+  width: 100%;
+  background-color: #fff;
+  height: 5px;
+  border: none;
+  border-radius: 1em;
+}
+
+.timer {
+  font-size: 10em;
+  font-weight: 700;
+}
+
+.button-wrapper {
+  display: flex;
+  gap: 1em;
+}
+
+button {
+  font-size: 2em;
+  font-weight: 800;
+  letter-spacing: 1px;
+  padding: 0.5em 1.5em;
+  border-radius: 0.5em;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+button:hover {
+  transform: translateY(-4px);
+}
+
+#start {
+  background-color: #00ff55;
+}
+
+#stop {
+  background-color: #39c5bb;
+}
+
+#reset {
+  background-color: #ffe100;
 }
