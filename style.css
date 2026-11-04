@@ -81,3 +81,45 @@ button:hover {
 #reset {
   background-color: #ffe100;
 }
+
+@media (width <= 430px) {
+  .container {
+    width: 80vw;
+    padding: 1em;
+    gap: 1vw;
+  }
+
+  .timer {
+    font-size: 20vw;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+  }
+
+  button {
+    font-size: 5vw;
+    transition: none;
+    padding: 0.5em 3em;
+  }
+}
+
+@media (430px < width <= 920px) {
+  .container {
+    width: 80vw;
+    padding: 1.5em;
+  }
+
+  .timer {
+    font-size: 20vw;
+  }
+
+  .button-wrapper {
+    gap: 0.5em;
+  }
+
+  button {
+    font-size: 4vw;
+    transition: none;
+  }
+}
