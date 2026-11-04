@@ -71,11 +71,11 @@ button:hover {
 }
 
 #start {
-  background-color: #00ff55;
+  background-color: #39c5bb;
 }
 
 #stop {
-  background-color: #39c5bb;
+  background-color: #ffc0cb;
 }
 
 #reset {
@@ -101,6 +101,10 @@ button:hover {
     font-size: 5vw;
     transition: none;
     padding: 0.5em 3em;
+  }
+
+  button:hover {
+    transform: none;
   }
 }
 
