@@ -19,6 +19,10 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+span {
+  font-size: 8px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -93,6 +97,10 @@ button:hover {
     font-size: 20vw;
   }
 
+  .title {
+    font-size: 7vw;
+  }
+
   .button-wrapper {
     flex-direction: column;
   }
@@ -116,6 +124,10 @@ button:hover {
 
   .timer {
     font-size: 20vw;
+  }
+
+  .title {
+    font-size: 7vw;
   }
 
   .button-wrapper {
