@@ -87,6 +87,10 @@ button:hover {
   background-color: #ffe100;
 }
 
+#miku-chara {
+  display: none;
+}
+
 @media (width <= 430px) {
   .container {
     width: 80vw;
@@ -114,6 +118,20 @@ button:hover {
 
   button:hover {
     transform: none;
+  }
+  #miku-chara {
+    display: block;
+    width: 60%;
+    position: fixed;
+    bottom: 0;
+    transform: translateY(100%);
+    transition:
+      bottom 3s ease-in-out,
+      transform 3s ease-in-out;
+  }
+
+  #miku-chara.show {
+    transform: translateY(33%);
   }
 }
 

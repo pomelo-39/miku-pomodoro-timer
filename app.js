@@ -2,6 +2,7 @@ const $start = document.getElementById("start");
 const $stop = document.getElementById("stop");
 const $reset = document.getElementById("reset");
 const $timer = document.getElementById("timer");
+const $miku = document.getElementById("miku-chara");
 
 let WORK_TIME = 1500;
 let BREAK_TIME = 300;
@@ -9,6 +10,8 @@ let BREAK_TIME = 300;
 let timeLeft = WORK_TIME;
 let isBreak = false;
 let interval = null;
+let mikuShowFlag = false;
+// ここから
 
 const updateTimeDisplay = () => {
   const minutes = Math.floor(timeLeft / 60);
@@ -28,10 +31,28 @@ const resetTimer = () => {
   updateTimeDisplay();
 };
 
+const showMikuAnimation = () => {
+  $miku.classList.add("show");
+
+  setTimeout(() => {
+    $miku.classList.remove("show");
+  }, 6000);
+};
+
 const timerStep = () => {
   if (timeLeft > 0) {
     timeLeft--;
     updateTimeDisplay();
+
+    const currentSeconds = timeLeft % 60;
+    if (currentSeconds === 40 && !mikuShowFlag) {
+      mikuShowFlag = true;
+      showMikuAnimation();
+    }
+
+    if (currentSeconds !== 40) {
+      mikuShowFlag = false;
+    }
   } else {
     stopTimer();
     if (!isBreak) {
