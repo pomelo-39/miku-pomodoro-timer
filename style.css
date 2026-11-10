@@ -131,7 +131,7 @@ button:hover {
   }
 
   #miku-chara.show {
-    transform: translateY(33%);
+    transform: translateY(45%);
   }
 }
 
