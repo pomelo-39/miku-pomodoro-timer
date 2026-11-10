@@ -8,7 +8,7 @@
 
 - **ポモドーロ・サイクル**: 勉強時間（25分）と休憩時間（5分）を自動でループ。
 
-## 使用技術 (Tech Stack)
+## 使用技術
 
 - **Frontend**: HTML5, CSS3, JavaScript (Vanilla JS)
 - **Infrastructure**: Docker (Nginx / Alpine)
