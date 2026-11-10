@@ -45,7 +45,7 @@ const timerStep = () => {
     updateTimeDisplay();
 
     const currentSeconds = timeLeft % 60;
-    if (currentSeconds === 40 && !mikuShowFlag) {
+    if (currentSeconds === 40 && !mikuShowFlag && !isBreak) {
       mikuShowFlag = true;
       showMikuAnimation();
     }
