@@ -19,6 +19,10 @@ body {
   font-variation-settings: "wdth" 100;
 }
 
+input {
+  display: none;
+}
+
 span {
   font-size: 8px;
 }
@@ -130,8 +134,22 @@ button:hover {
       transform 3s ease-in-out;
   }
 
+  button:active {
+    transform: scale(0.95);
+  }
+
   #miku-chara.show {
     transform: translateY(45%);
+  }
+
+  #start.start-active {
+    background-color: #fff;
+    color: #39c5bb;
+  }
+
+  #stop.stop-active {
+    background-color: #fff;
+    color: #ffc0cb;
   }
 }
 

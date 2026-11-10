@@ -3,6 +3,8 @@ const $stop = document.getElementById("stop");
 const $reset = document.getElementById("reset");
 const $timer = document.getElementById("timer");
 const $miku = document.getElementById("miku-chara");
+const $startRadio = document.getElementById("start-radio");
+const $stopRadio = document.getElementById("stop-radio");
 
 let WORK_TIME = 1500;
 let BREAK_TIME = 300;
@@ -22,12 +24,20 @@ const updateTimeDisplay = () => {
 const stopTimer = () => {
   clearInterval(interval);
   interval = null;
+  $stopRadio.isChecked = true;
+  $startRadio.isChecked = false;
+  if ($stopRadio.isChecked) {
+    $stop.classList.add("stop-active");
+    $start.classList.remove("start-active");
+  }
 };
 
 const resetTimer = () => {
   stopTimer();
   isBreak = false;
   timeLeft = WORK_TIME;
+  $start.classList.remove("start-active");
+  $stop.classList.remove("stop-active");
   updateTimeDisplay();
 };
 
@@ -71,6 +81,12 @@ const timerStep = () => {
 
 const startTimer = () => {
   if (interval !== null) return;
+  $startRadio.isChecked = true;
+  $stopRadio.isChecked = false;
+  if ($startRadio.isChecked) {
+    $start.classList.add("start-active");
+    $stop.classList.remove("stop-active");
+  }
 
   interval = setInterval(timerStep, 1000);
 };
