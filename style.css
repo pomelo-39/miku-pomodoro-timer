@@ -51,6 +51,7 @@ hr {
 .timer {
   font-size: 10em;
   font-weight: 700;
+  font-variant-numeric: tabular-nums;
 }
 
 .button-wrapper {
